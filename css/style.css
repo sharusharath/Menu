@@ -1,7 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+#topAnchor{
+    width: 1px;
+    border: none;
+}
+#topAnchor:focus{
+    outline: none!important;
+    box-shadow: none!important; 
+}
 
 html,body{
     padding: 0;
