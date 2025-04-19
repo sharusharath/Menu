@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Focus on topAnchor and scroll to top
-        scrollToTop();
+        scrollnew();
     });
     
     // Handle back button click
@@ -187,6 +187,10 @@ function scrollToTop() {
     }, 100);
 }
 
+    function scrollnew(){
+        document.getElementById('topAnchor').focus();
+    }
+    
 // Stub for missing functions (replace these with your actual implementations)
 function changeImageForResultModal() {
     // Your implementation here
