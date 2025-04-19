@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultModalHTML = `
     <div class="modalResult" id="prequalDesktopModalResult" style="display: none;">
         <div class="widget-modal-header">
+	<div id="topAnchor" style="position: absolute; top: 0; height: 1px; width: 100%;"></div>
             <h1 class="modal-title Container-title" id="staticBackdropLabel">Credit Estimator <span> <img src="" alt="" id="makeImgPrequalResult"></span></h1>
         </div>
         <div class="widget-modal-body">
@@ -218,6 +219,8 @@ document.addEventListener('DOMContentLoaded', function() {
             imageElement.src = 'https://d1jougtdqdwy1v.cloudfront.net/dealeradmin/images/inwidget_redesign.svg';
         }
     }
+
+	document.getElementById('topAnchor').scrollIntoView(true);
     
     // Initialize the credit meter function (copied from your credit-result.html)
     function initCreditMeter() {
