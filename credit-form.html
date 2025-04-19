@@ -4,46 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://d1jougtdqdwy1v.cloudfront.net/css/widgetBootstrap/widgetBootstrap.css">
     <link rel="stylesheet" href="https://d1jougtdqdwy1v.cloudfront.net/css/5.2.3/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <script type="text/javascript" src="https://d1jougtdqdwy1v.cloudfront.net/js/5.2.3/bootstrap.bundle.min.js"></script>
-    <!-- <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script> -->
-    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> -->
 </head>
 <body class="make_inwidget_redesign">
-    <!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#prequalDesktopModal">
-    Launch static backdrop modal
-  </button>
-
-
-  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#prequalMobileOffcanvas" aria-controls="staticBackdrop">
-    Toggle static offcanvas
-  </button> -->
-  
-  
-  
-   <!-- Modal -->
+   <!-- Form Modal -->
    <section class="prequalDesktopModalContainerModal">
     <div class="modalPrequal" id="prequalDesktopModal">
             <div class="modal-header-prequal">
               <button id="extraFocus" style="position: absolute; opacity: 0; pointer-events: none;" tabindex="-1">Hidden</button>
-
                 <h1 class="modal-title-prequal Container-title" id="staticBackdropLabel">Credit Estimator <span><img src="" alt="" id="makeImgPrequal"></span></h1>
-				
             </div>
             <div class="widget-modal-body">
                 <div class="form-body">
                     <form action="/estimate" method="POST" id="estimator-form">
-					<input type="hidden" id="make" name="make" value="jeep">
-			        <input type="hidden" id="analytics_payload" name="analytics_payload" value="">
+                    <input type="hidden" id="make" name="make" value="jeep">
+                    <input type="hidden" id="analytics_payload" name="analytics_payload" value="">
                     <p class="form-title">Fill out the following form to get an estimated max monthly payment and loan amount</p> 
                         <div class="widget-row">
-                            
                             <div class="widget-col-lg-6 widget-col-md-6 widget-col-sm-6">
                                 <label for="">First Name<span class="mandat">*</span></label>
                                 <input type="text" class="widget-form-control form-field" id="firstname" name="first-name" autocomplete="off" value="">
@@ -59,8 +41,6 @@
                                 <input type="text" class="widget-form-control form-field" id="email" name="email" autocomplete="off" value="">
                                 <small class="error-message" id="useremail-error"></small>
                             </div>
-                        <!-- </div> -->
-                        <!-- <div class="row"> -->
                             <div class="widget-col-lg-6 widget-col-md-6 widget-col-sm-6">
                                 <label for="">Phone<span class="mandat">*</span></label>
                                 <input type="text" maxlength="14" class="widget-form-control form-field" id="phone" name="phone" autocomplete="off">
@@ -71,63 +51,43 @@
                                 <input type="text" class="widget-form-control form-field" id="address" name="address" autocomplete="off" placeholder="apartment no, street name">
                                 <small class="error-message" id="address-error"></small>
                             </div>
-                            <!-- <div class="col-lg-4 col-md-6 col-sm-6">
-                                <label for="">Address Line 2 </label>
-                                <input type="text" class="form-control form-field" id="addressline2" name="addressline2"  autocomplete="off">
-                                <small class="error-message"></small>
-                            </div> -->
-                        <!-- </div> -->
-                        <!-- <div class="row"> -->
                             <div class="widget-col-lg-6 widget-col-md-6 widget-col-sm-6">
                                 <label for="">City<span class="mandat">*</span></label>
                                 <input type="text" class="widget-form-control form-field" id="city" name="city"  autocomplete="off">
                                 <small class="error-message" id="city-error"></small>
                             </div>
+                        </div>
+                        <div class="widget-row">
+                            <div class="widget-col-lg-6 widget-col-md-6 widget-col-sm-6">
+                                <label for="">State<span class="mandat">*</span></label>
+                                <input type="text" class="widget-form-control form-field" id="state" name="state"  autocomplete="off">
+                                <small class="error-message" id="state-error"></small>
                             </div>
-                            <div class="widget-row">
-                                <div class="widget-col-lg-6 widget-col-md-6 widget-col-sm-6">
-                                    <label for="">State<span class="mandat">*</span></label>
-                                    <input type="text" class="widget-form-control form-field" id="state" name="state"  autocomplete="off">
-                                    <small class="error-message" id="state-error"></small>
-                                </div>
-                                <div class="widget-col-lg-6 widget-col-md-6 widget-col-sm-6">
-                                    <label for="">ZIP Code<span class="mandat">*</span></label>
-                                    <input type="tel" id="zipcode" name="zipcode" class="widget-form-control form-field" autocomplete="off" maxlength="5" value="">
-                                    <small class="error-message" id="zipcode-error"></small>
-                                </div>
-                            <!-- <div class="col-lg-4 col-md-4 col-sm-6">
-                                <label for="">Pre Tax Monthly Income <span class="mandat">*</span></label>
-                                <input type="number" id="income" name="income" min="0" class="form-control form-field" autocomplete="off">
-                                <small class="error-message" id="income-error"></small>
-                            </div> -->
+                            <div class="widget-col-lg-6 widget-col-md-6 widget-col-sm-6">
+                                <label for="">ZIP Code<span class="mandat">*</span></label>
+                                <input type="tel" id="zipcode" name="zipcode" class="widget-form-control form-field" autocomplete="off" maxlength="5" value="">
+                                <small class="error-message" id="zipcode-error"></small>
                             </div>
+                        </div>
                         <span class="noteText">Note: This will not affect your credit score.</span>
                         <div class="modal-footer-form">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="landscapeCheck">
                                 <label class="form-check-label termsCheck" for="landscapeCheck">
-                                    I certify I am providing my consent to Offerlogix to obtain my credit score to use in connection with a potential credit transaction. I understand that by giving my consent, my credit score will be accessed by Offerlogix via a “soft pull” and understand that this soft pull will not impact my credit score.
+                                    I certify I am providing my consent to Offerlogix to obtain my credit score to use in connection with a potential credit transaction. I understand that by giving my consent, my credit score will be accessed by Offerlogix via a "soft pull" and understand that this soft pull will not impact my credit score.
                                 </label>
                             </div>
                             <button type="button" class="widget-btn estimateBtn" id="estimateBtn" tabindex="0">See my estimate</button>
                         </div>
                     </form>
-
                 </div>
             </div>
     </div>
-</section>
-<!-- Modal End -->
 
-<script>
-  // Add this code at the end of your credit-form.html file or in a separate JavaScript file
-
-document.addEventListener('DOMContentLoaded', function() {
-    // First, let's add the result modal HTML to the page
-    const resultModalHTML = `
+    <!-- Results Modal - Directly in HTML instead of template string -->
     <div class="modalResult" id="prequalDesktopModalResult" style="display: none;">
         <div class="widget-modal-header">
-            <div id="topAnchor" style="position: absolute; top: 0; height: 1px; width: 100%;"></div>
+            <div id="topAnchor" tabindex="-1" style="position: absolute; top: 0; height: 1px; width: 100%;"></div>
             <h1 class="modal-title Container-title" id="staticBackdropLabel">Credit Estimator <span> <img src="" alt="" id="makeImgPrequalResult"></span></h1>
         </div>
         <div class="widget-modal-body">
@@ -155,10 +115,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 <!-- CREDIT METER END -->
             </div>
         </div>
-    </div>`;
-    
-    // Add the results modal to the page
-    document.querySelector('.prequalDesktopModalContainerModal').insertAdjacentHTML('beforeend', resultModalHTML);
+    </div>
+</section>
+
+<script>
+// Place this script separately for cleaner organization
+document.addEventListener('DOMContentLoaded', function() {
+    // Initial setup - focus on the hidden button to aid accessibility
+    document.getElementById('extraFocus').focus();
     
     // Get references to both modals
     const formModal = document.getElementById('prequalDesktopModal');
@@ -176,7 +140,18 @@ document.addEventListener('DOMContentLoaded', function() {
         formModal.style.display = 'none';
         resultModal.style.display = 'block';
         
-       
+        // Update image in result modal based on body class
+        if (typeof changeImageForResultModal === 'function') {
+            changeImageForResultModal();
+        }
+        
+        // Initialize the credit meter
+        if (typeof initCreditMeter === 'function') {
+            initCreditMeter();
+        }
+        
+        // Focus on topAnchor and scroll to top
+        scrollToTop();
     });
     
     // Handle back button click
@@ -184,34 +159,56 @@ document.addEventListener('DOMContentLoaded', function() {
         resultModal.style.display = 'none';
         formModal.style.display = 'block';
     });
+});
+
+// Separate scroll to top function
+function scrollToTop() {
+    // Focus on the anchor element
+    const topElement = document.getElementById('topAnchor');
+    if (topElement) {
+        topElement.focus();
+        // Try multiple scrolling approaches
+        topElement.scrollIntoView({block: 'start', behavior: 'auto'});
+    }
     
-      
-       setTimeout(function() {
-        // Try to scroll the modal or its container to the top
-        resultModal.scrollTop = 0;
-        
-        // Also try scrollIntoView as a backup
-        const topElement = document.getElementById('topAnchor');
+    // Also try direct scrolling approaches
+    document.querySelector('.modalResult').scrollTop = 0;
+    
+    // Force window scroll to top
+    window.scrollTo(0, 0);
+    
+    // Try again after a short delay to ensure rendering is complete
+    setTimeout(function() {
         if (topElement) {
-            topElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+            topElement.scrollIntoView({block: 'start', behavior: 'auto'});
         }
-        
-        // As another alternative, try scrolling the window to the top
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }, 300); // 
-       
+        document.querySelector('.modalResult').scrollTop = 0;
+        window.scrollTo(0, 0);
+    }, 100);
+}
+
+// Stub for missing functions (replace these with your actual implementations)
+function changeImageForResultModal() {
+    // Your implementation here
+    const makeImgResult = document.getElementById('makeImgPrequalResult');
+    if (makeImgResult) {
+        // Set the image source based on the make value or body class
+        const make = document.getElementById('make').value;
+        if (make === 'jeep') {
+            makeImgResult.src = 'path/to/jeep-logo.png';
         }
-    
-  );
+    }
+}
 
-
+function initCreditMeter() {
+    // Your credit meter initialization code here
+    const canvas = document.getElementById('creditmeter');
+    if (canvas) {
+        // Canvas initialization code here
+        // This is just a placeholder
+        console.log('Credit meter initialized');
+    }
+}
 </script>
-
-
-
-
 </body>
 </html>
