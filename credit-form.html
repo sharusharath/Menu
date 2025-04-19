@@ -186,7 +186,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
       
-    document.getElementById('topAnchor').scrollIntoView(true);
+     setTimeout(function() {
+        document.getElementById('topAnchor').scrollIntoView({behavior: 'smooth'});
+    }, 100);
        
         }
     
