@@ -186,9 +186,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
       
-     setTimeout(function() {
-        document.getElementById('topAnchor').scrollIntoView({behavior: 'smooth'});
-    }, 100);
+       setTimeout(function() {
+        // Try to scroll the modal or its container to the top
+        resultModal.scrollTop = 0;
+        
+        // Also try scrollIntoView as a backup
+        const topElement = document.getElementById('topAnchor');
+        if (topElement) {
+            topElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+        }
+        
+        // As another alternative, try scrolling the window to the top
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }, 300); // 
        
         }
     
