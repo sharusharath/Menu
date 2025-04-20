@@ -4,6 +4,7 @@
 #topAnchor{
     width: 1px;
     border: none;
+    pointer-events:none;
 }
 #topAnchor:focus{
     outline: none!important;
