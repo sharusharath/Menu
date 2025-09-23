@@ -860,6 +860,7 @@ body.make_alfa{
 @media(max-width: 767px){
     .prequalDesktopModalContainerModal{
         padding: 10px;
+        height:1700px;
     }
     #estimator-score-container{
         .backcta{
@@ -950,3 +951,4 @@ body.make_spoticar{
     }
      font-family: 'Roboto', sans-serif !important;
 }
+
